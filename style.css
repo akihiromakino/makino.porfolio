@@ -1,0 +1,163 @@
+body {
+  font-size: 16px;
+  font-family: serif;
+}
+
+@keyframes titleAnimation {
+  0% {
+    letter-spacing: 20px;
+    opacity: 0;
+  }
+}
+
+header {
+  height: 70px;
+  line-height: 70px;
+  position: fixed;
+  padding-left: 50px;
+  animation: titleAnimation 3s;
+}
+
+header h2 {
+  font-size: 30px;
+  letter-spacing: 10px;
+  animation: titleAnimation 3s;
+}
+
+header li {
+  list-style: none;
+  display: inline-block;
+  left: 0;
+  padding-right: 70px;
+  font-size: 20px;
+}
+
+header a {
+  color: black;
+  text-decoration: none;
+}
+
+.main-top {
+  text-align: right;
+  margin-left: 200px;
+  position: relative;
+
+}
+
+.main-top img {
+  width: 700px;
+  height: 750px;
+}
+
+.main-top p {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  line-height: 40px;
+  letter-spacing: 5px;
+  text-align: left;
+}
+
+.contents {
+  max-width: 1000px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.contents li {
+  list-style: none;
+  margin-bottom: 300px;
+  position: relative;
+  cursor: pointer;
+}
+
+.contents img {
+  width: 65%;
+  border-radius: 10px;
+  display: block;
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: 2s .5s;
+}
+
+.contents h2 {
+  background-color: rgb(185, 209, 239, .5);
+  font-size: 40px;
+  font-weight: bold;
+  white-space: normal;
+  padding: 10px 20px;
+  letter-spacing: 10px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: 2s;
+}
+
+.contents p {
+  background-color: rgb(185, 209, 239, .5);
+  white-space: normal;
+  padding: 30px 20px;
+  letter-spacing: 5px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 2s;
+}
+
+.contentsText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 40px;
+}
+
+.contents li:nth-child(odd) .contentsText {
+  right: 0;
+}
+
+.contents li:nth-of-type(odd) img {
+  transform: translate(-20px, -20px);
+}
+
+.contents li:nth-child(even) img {
+  margin-left: auto;
+  transform: translate(20px, 20px);
+}
+
+.contents li:nth-child(even) .contentsText {
+  align-items: flex-start;
+}
+
+.firstName {
+  width: 190px;
+}
+
+.secondName {
+  width: 300px;
+}
+
+.thirdName {
+  width: 300px;
+}
+
+.contents li.show h2,
+.contents li.show p,
+.contents li.show img {
+  transform: none;
+  opacity: 1;
+}
+
+footer {
+  height: 100px;
+  font-size: 20px;
+  letter-spacing: 10px;
+  background-color: rgb(240, 245, 248);
+  line-height: 100px;
+  padding-left: 70px;
+}
+
+
+
+
+
